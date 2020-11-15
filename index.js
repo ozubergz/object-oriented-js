@@ -1,4 +1,5 @@
-//object
+//////////////////////// Object //////////////////////////////////
+
 const user = {
     email: 'hello@world.com',
     name: 'Ryu',
