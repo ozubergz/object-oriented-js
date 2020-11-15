@@ -18,5 +18,20 @@
 
 //////////////////////// Class //////////////////////////////////
 
+class User {
+    constructor(email, name) {
+        this.email = email;
+        this.name = name;
+    }
+}
 
+const userOne = new User('hello@world.com', 'Ryu');
+const userTwo = new User('jim@world.com', 'Jim');
 
+//the 'new' keyword
+// - creates a new empty object {}
+// - sets the value of 'this' to be the new object
+// - calls the constructor method
+
+console.log(userOne)
+console.log(userTwo)
