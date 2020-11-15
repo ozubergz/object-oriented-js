@@ -11,5 +11,6 @@ const user = {
 }
 
 console.log(user.email)
+console.log(user.name)
 console.log(user.login())
 console.log(user.logout())
