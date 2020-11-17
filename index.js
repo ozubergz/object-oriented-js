@@ -58,6 +58,7 @@ const admin = new Admin('shaun@ninja.com', 'Shaun');
 admin.deleteUser(userOne)
 // userTwo.deleteUser(userOne) //user does cannot deleteUser method
 
+
 console.log(admin)
 console.log(users)
 
