@@ -49,7 +49,7 @@ let users = [userOne, userTwo];
 
 class Admin extends User {
     deleteUser(user) {
-        users = users.filter(u => u.email === user.email)
+        users = users.filter(u => u.email !== user.email)
     }
 }
 
