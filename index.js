@@ -42,25 +42,17 @@ class User {
     }
 }
 
-const userOne = new User('hello@world.com', 'Ryu');
-const userTwo = new User('jim@world.com', 'Jim');
-
-let users = [userOne, userTwo];
-
 class Admin extends User {
     deleteUser(user) {
         users = users.filter(u => u.email !== user.email)
     }
 }
 
+const userOne = new User('hello@world.com', 'Ryu');
+const userTwo = new User('jim@world.com', 'Jim');
 const admin = new Admin('shaun@ninja.com', 'Shaun');
 
-admin.deleteUser(userOne)
-// userTwo.deleteUser(userOne) //user does cannot deleteUser method
+let users = [userOne, userTwo];
 
-
-console.log(admin)
-console.log(users)
-
-
-
+// admin.deleteUser(userOne)
+// userTwo.deleteUser(userOne)
