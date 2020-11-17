@@ -45,11 +45,21 @@ class User {
 const userOne = new User('hello@world.com', 'Ryu');
 const userTwo = new User('jim@world.com', 'Jim');
 
-//the 'new' keyword
-// - creates a new empty object {}
-// - sets the value of 'this' to be the new object
-// - calls the constructor method
+let users = [userOne, userTwo];
 
-userOne.login().updateScore().updateScore().updateScore()
+class Admin extends User {
+    deleteUser(user) {
+        users = users.filter(u => u.email === user.email)
+    }
+}
+
+const admin = new Admin('shaun@ninja.com', 'Shaun');
+
+admin.deleteUser(userOne)
+// userTwo.deleteUser(userOne) //user does cannot deleteUser method
+
+console.log(admin)
+console.log(users)
+
 
 
