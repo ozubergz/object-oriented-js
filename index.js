@@ -22,14 +22,23 @@ class User {
     constructor(email, name) {
         this.email = email;
         this.name = name;
+        this.score = 0;
     }
 
     login() {
         console.log(this.email, 'just logged in')
+        return this
     }
 
     logout() {
         console.log(this.email, 'just logged out')
+        return this
+    }
+
+    updateScore() {
+        this.score++
+        console.log(this.email, 'score is now', this.score)
+        return this
     }
 }
 
@@ -41,8 +50,6 @@ const userTwo = new User('jim@world.com', 'Jim');
 // - sets the value of 'this' to be the new object
 // - calls the constructor method
 
-console.log(userOne)
-console.log(userTwo)
+userOne.login().updateScore().updateScore().updateScore()
 
-userOne.login()
-userTwo.logout()
+
