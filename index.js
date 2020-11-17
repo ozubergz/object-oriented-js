@@ -9,12 +9,12 @@ function User(email, name) {
 
 User.prototype.login = function() {
     this.online = true;
-    console.log(this.email, 'has logged in')
+    console.log(this.email, 'has logged in');
 }
 
 User.prototype.logout = function() {
     this.online = false;
-    console.log(this.email, 'has logged out')
+    console.log(this.email, 'has logged out');
 }
 
 const userOne = new User('hello@world.com', 'Ryu');
